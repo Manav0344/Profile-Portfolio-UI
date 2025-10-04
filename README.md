@@ -13,7 +13,7 @@ Contact – A contact form for inquiries, collaborations, or messages.
 
 Navigation & Responsiveness – Smooth navigation menu and a responsive design that works seamlessly across desktops, tablets, and mobile devices.
 
-Dark Mode Support – Provides an option for dark theme for better user experience.
+
 
 The design emphasizes simplicity, clarity, and usability. All elements are structured for easy updates, making it a great template for personal branding. This project demonstrates front-end development skills including semantic HTML, CSS layout techniques, responsive design with media queries, and basic interactivity.
 
