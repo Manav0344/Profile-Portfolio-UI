@@ -377,76 +377,98 @@ body{
 }
 
 
-.portfolio{
-  /* margin-top: 30px; */
+.portfolio {
   margin: 0 auto;
-}
-.projects{
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap;
+  padding: 40px 5%;
 }
 
-.card1{
-  margin-top: 35px;
-  /* max-width: 1200px; */
-  border: 2px solid #3e3e3e;
-  max-width: min-content;
-  padding: 20px;
-  border-radius: 10%;
-  background: #202020;
-  cursor: pointer;
-  transition:all .3s ease-in-out;
+.projects {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
-.card1:hover{
+
+.card1 {
+  width: 100%;
+  max-width: 480px;
+  background: #202020;
+  border: 2px solid #3e3e3e;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card1:hover {
   transform: translateY(-10px);
   box-shadow: 5px 5px 10px #1e1e1e;
   background: rgb(20, 20, 20);
 }
-.card-img img{
-  height: 180px;
-  width: 250px;
-  object-fit: cover;
-  border-radius: 10%;
+
+.card-img {
+  width: 100%;
   overflow: hidden;
 }
 
-.card-text{
-  text-align: center;
-  margin-top: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.card-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
 }
 
-.btn{
-  padding: 8px;
+.card-text {
+  text-align: center;
+  padding: 15px 10px;
+  color: #cbd5e1;
+}
+
+.card-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-text p {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+
+span {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border: 1px solid #ea580c;
+  border-radius: 10px;
+  background: #6b2601;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
   margin-top: 10px;
   background: #000;
   color: #a0a0a0;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: all .50s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn:hover{
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn:hover {
   background-color: transparent;
   color: #cbd5e1;
   border: 1px solid #a0a0a0;
 }
-
-span{
-   display:inline-block ;
-  margin-top: 10px;
-  padding: 4px;
-  font-size: 0.8rem;
-  border: 1px solid #ea580c;
-  border-radius: 10px;
-  /* margin-top: 20px; */
-  background: #6b2601;
-}
-
 
 
 .contact-section{
@@ -551,6 +573,16 @@ span{
     background: #1e1e1e;
 }
 
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 1001;
+}
 
 
 
@@ -572,13 +604,86 @@ span{
 }
 
 
+@media (max-width: 992px) {
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 1001;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #202020;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+    width: 180px;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .navlist.open {
+    transform: scaleY(1);
+  }
+
+  .navlist li a {
+    color: #fff;
+    font-size: 1rem;
+  }
+}
+
 
 @media screen and (max-width:750px){
-  .projects{
-    display: grid;
+ 
+  .projects {
     grid-template-columns: 1fr;
-    
+  }
 
+  .card1 {
+    max-width: 100%;
+  }
+
+  .card-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-text p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-text {
+    padding: 10px;
+  }
+
+  .card-text h3 {
+    font-size: 1rem;
+  }
+
+  .card-text p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  span {
+    font-size: 0.7rem;
   }
 
   #navigation ul{
@@ -590,8 +695,8 @@ span{
 
   .sidebar {
     /* display: flex; */
-    /* flex-direction: column;  */
-    /* align-items: center;
+    /* flex-direction: column; 
+    align-items: center;
     justify-content: center; */
     text-align: center;
     gap: 40px;
@@ -626,9 +731,14 @@ span{
 
   .contact {
     text-align: center;
+    
+  }
+  .form-grid{
+    grid-template-columns: 1fr;
   }
 
-
 }
+
+
 
 
