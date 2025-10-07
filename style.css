@@ -17,6 +17,28 @@ html body{
 html{
   scroll-behavior: smooth;
 }
+
+::selection{
+ background-color: #ffbf00;
+ color: #1e1e1e;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #1e1e1e;
+  /* color: #1e1e1e; */
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffbf00;
+}
+
+
+
 body{
     background-color: #1e1e1e;
     color: #a0a0a0;
@@ -36,7 +58,7 @@ body{
 }
 
 .sidebar{
-    height: 95vh;
+    height: 100vh;
     background-color: #2a2a2a;
     border: 1px solid #3a3a3a;
     border-radius: 10px;
@@ -160,7 +182,9 @@ body{
     color: #ffbf00;
 }
 
-#navigation ul li a active{
+ul li a:hover,
+ul li a:active{
+    width: 100%;
     color: #ffbf00;
 }
 
@@ -519,12 +543,18 @@ span {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
+  /* max-width: 1500px;
+  max-height: 500px; */
   padding: 14px 16px;
   border: 1px solid #3e3e3e;
   border-radius: 8px;
   background-color: #1e1e1e;
   color: #a0a0a0;
   font-size: 15px;
+}
+
+.contact-form textarea {
+  min-width: 300px;
 }
 
 .contact-form input::placeholder,
