@@ -65,6 +65,7 @@ body{
     padding: 40px;
     position: sticky;
     top: 20px;
+    margin-bottom: 20px;
 }
 
 .content{
@@ -781,6 +782,7 @@ span {
   }
 
 }
+
 
 
 
