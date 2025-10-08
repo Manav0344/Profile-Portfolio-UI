@@ -28,7 +28,7 @@ html{
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #1e1e1e;
+  background-color: #3e3e3e;
   /* color: #1e1e1e; */
 }
 
@@ -782,7 +782,6 @@ span {
   }
 
 }
-
 
 
 
